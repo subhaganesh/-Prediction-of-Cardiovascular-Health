@@ -1,2 +1,2 @@
 # Heart_disease_prediction
-![image]()https://videocdn.geeksforgeeks.org/geeksforgeeks/HeartDiseasePredictionDecisionTreeAlgorithm/HeartdiseasepredictionusingDecisionTree20220513143702.jpg
+![image](https://videocdn.geeksforgeeks.org/geeksforgeeks/HeartDiseasePredictionDecisionTreeAlgorithm/HeartdiseasepredictionusingDecisionTree20220513143702.jpg)
