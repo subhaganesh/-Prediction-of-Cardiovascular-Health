@@ -1,4 +1,4 @@
-# Heart_disease_prediction
+#  Prediction of Cardiovascular Health
 ![image](https://videocdn.geeksforgeeks.org/geeksforgeeks/HeartDiseasePredictionDecisionTreeAlgorithm/HeartdiseasepredictionusingDecisionTree20220513143702.jpg)
 
 # Deployiny Heart_disease_prediction app in streamlit using hugging spaces
