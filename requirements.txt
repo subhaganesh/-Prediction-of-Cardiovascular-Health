@@ -2,3 +2,4 @@ streamlit
 altair==4.1.0
 numpy
 scikit-learn
+altair

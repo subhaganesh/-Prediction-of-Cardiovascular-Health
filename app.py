@@ -2,7 +2,7 @@ import numpy as np
 import pickle
 import streamlit as st
 import altair as alt
-from altair.vegalite.v4.api import Chart
+import altair.vegalite.v4.api
 
 #loading the saved model
 model = pickle.load(open("heart_disease_model.sav", 'rb'))
@@ -27,46 +27,36 @@ def heart_disesse_features(input_data):
       return 'The Person has Heart Disease'
     
 
-def heart_disease_prediction():
-    st.title("Heart Disease Prediction")
+def main():
+    # Giving a title
+    st.title('heart disease Prediction Web App')
     
-    # Input data and their corresponding min-max values
-    input_features = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
-                      'exang', 'oldpeak', 'slope', 'ca', 'thal']
+    # Getting the input data from the user
+    Age = st.number_input('age of person', min_value=0, max_value=100, step=1)
+    sex = st.number_input('sex', min_value=0, max_value=1, step=1)
+    cp = st.number_input('cp', min_value=0, max_value=3, step=1)
+    trestbps = st.number_input('trestbps', min_value=80, max_value=200, step=1)
+    chol = st.number_input('chol', min_value=100, max_value=600, step=1)
+    fbs= st.number_input('fbs', min_value=0, max_value=1)
+    restecg = st.number_input('restecg', min_value=0, max_value=2,step=1)
+    thalach= st.number_input('thalach', min_value=70, max_value=220, step=1)
+    exang= st.number_input('exang', min_value=0, max_value=1, step=1)
+    oldpeak= st.number_input('oldpeak', min_value=1.0, max_value=5.5, step=1)
+    slope= st.number_input('slope', min_value=0, max_value=2, step=1)
+    ca= st.number_input('ca', min_value=0, max_value=4, step=1)
+    thal= st.number_input('thal', min_value=0, max_value=3, step=1)
+
+    # Code for Prediction
+    diagnosis = ''
     
-    feature_ranges = {
-        'age': (20, 80),
-        'sex': (0, 1),
-        'cp': (0, 3),
-        'trestbps': (80, 200),
-        'chol': (100, 600),
-        'fbs': (0, 1),
-        'restecg': (0, 2),
-        'thalach': (70, 220),
-        'exang': (0, 1),
-        'oldpeak': (0, 6),
-        'slope': (0, 2),
-        'ca': (0, 4),
-        'thal': (0, 3)
-    }
+    # Creating a button for Prediction
+    if st.button('Diabetes Test Result'):
+        diagnosis =heart_disesse_features ([Age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal])
+        
+    st.success(diagnosis)
     
-    st.sidebar.header("Input Values")
-    
-    # Display input sliders for each feature
-    input_values = {}
-    for feature in input_features:
-        min_val, max_val = feature_ranges[feature]
-        input_values[feature] = st.sidebar.slider(f"{feature.capitalize()} ({min_val} - {max_val})", min_val, max_val)
-    
-    # Add a button to trigger the prediction
-    if st.sidebar.button("Predict"):
-        # Here you can add your heart disease prediction logic using the input values
-        # For demonstration purposes, let's just display the input values
-        st.subheader("Input Values")
-        for feature, value in input_values.items():
-            st.write(f"{feature.capitalize()}: {value}")
 
 if __name__ == '__main__':
-    heart_disease_prediction()
+    main()
 
 #to run this app in browser we want to type streamlit run C:\Users\subha\heart disease prediction\app.py in command prompt
