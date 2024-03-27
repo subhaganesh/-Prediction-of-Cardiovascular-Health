@@ -2,7 +2,7 @@ import numpy as np
 import pickle
 import streamlit as st
 import altair as alt
-import altair.vegalite.v4.api
+#import altair.vegalite.v4.api
 
 #loading the saved model
 model = pickle.load(open("heart_disease_model.sav", 'rb'))

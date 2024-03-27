@@ -1,4 +1,4 @@
-# Heart_disease_prediction
+#  Prediction of Cardiovascular Health
 ![image](https://videocdn.geeksforgeeks.org/geeksforgeeks/HeartDiseasePredictionDecisionTreeAlgorithm/HeartdiseasepredictionusingDecisionTree20220513143702.jpg)
 
 # Deployiny Heart_disease_prediction app in streamlit using hugging spaces
@@ -22,3 +22,7 @@ numpy
 pandas
 # To run this app
 ## https://huggingface.co/spaces/subhaganesh/heart_disease_prediction
+
+# 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://subhaganesh.github.io/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/subhaganesh-s-170875236/)
