@@ -50,7 +50,7 @@ def main():
     diagnosis = ''
     
     # Creating a button for Prediction
-    if st.button('Diabetes Test Result'):
+    if st.button('heart_disesse Test Result'):
         diagnosis =heart_disesse_features ([Age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal])
         
     st.success(diagnosis)
